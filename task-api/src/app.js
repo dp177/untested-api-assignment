@@ -20,13 +20,13 @@ app.get('/', (req, res) => {
   a.card{display:block;padding:22px;border:1px solid #34445d;border-radius:14px;background:#172235;color:#e9edf5;text-decoration:none}
   a.card:hover,a.card:focus-visible{border-color:#85dbdb;outline:none}a.card span{display:block;margin-top:8px;color:#a8b8cf;font-size:.9rem}
   a{color:#85dbdb}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
-  pre{background:#090f1c;border:1px solid #34445d;border-radius:12px;padding:18px;overflow:auto;color:#c8e8e4;line-height:1.5}
+  pre{background:#090f1c;border:1px solid #34445d;border-radius:12px;padding:18px;white-space:pre-wrap;overflow-wrap:anywhere;color:#c8e8e4;line-height:1.5}
   section{margin-top:38px}small{color:#97a9c2}
 </style></head><body><main>
   <div class="eyebrow">Underpin take-home / Node.js + Express</div>
   <h1>The Untested API</h1>
   <p>A small task manager built to demonstrate behavior-first tests, bug investigation, and an assignment feature. This is an API, not a dashboard. The links below return JSON.</p>
-  <span class="badge">Demo data when SEED_DEMO=1</span>
+  <span class="badge">Sample tasks loaded on this demo</span>
   <div class="cards">
     <a class="card" href="/tasks">GET /tasks<span>See tasks and sample records</span></a>
     <a class="card" href="/tasks/stats">GET /tasks/stats<span>Counts by status and overdue</span></a>
