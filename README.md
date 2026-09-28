@@ -117,3 +117,7 @@ See [ASSIGNMENT.md](./ASSIGNMENT.md) for full submission requirements. At minimu
 See [SUBMISSION.md](SUBMISSION.md) for my approach, tests, coverage and production questions, and [BUG_REPORT.md](BUG_REPORT.md) for reproducible bugs and fixes. The API status values follow `ASSIGNMENT.md` and the existing code: `todo`, `in_progress`, `done`. The starter README previously used a conflicting status vocabulary, now corrected. `PATCH /tasks/:id/assign` takes `{ "assignee": "Name" }`, trims it, returns the updated task, rejects blank/non-string names with 400 and unknown tasks with 404; reassignment is allowed.
 
 This is an in-memory demo. A public deployment loses data on restart and has no authentication; do not enter private data.
+
+## Demo deployment
+
+The root URL is a small HTML guide to the API, with links to tasks, stats, source, tests and the bug report. The hosted demo sets `SEED_DEMO=1` to insert three **sample** tasks when its in-memory store starts empty. Local development and tests do not seed unless that variable is explicitly set. This is not persistence: free instances can spin down, and tasks are lost or reseeded when a process restarts. The service has no authentication, so do not enter private data.
