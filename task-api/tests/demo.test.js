@@ -12,6 +12,7 @@ test('root presents links and a clearly labelled demo, not an empty dashboard', 
   expect(response.headers['content-type']).toMatch(/html/);
   expect(response.text).toContain('GET /tasks');
   expect(response.text).toContain('BUG_REPORT.md');
+  expect(response.text).toContain('Sample tasks loaded on this demo');
   expect(response.text).toContain('In-memory data resets');
 });
 
